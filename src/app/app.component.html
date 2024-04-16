@@ -1,1 +1,5 @@
-<div>Add something :) Yeah</div>
+<app-game-control (gameDurationChangeEvent)="onEventOccurred($event)"></app-game-control>
+@for (item of values; track $index) {
+    <app-odd *ngIf="item % 2 === 1" [value]="item"></app-odd>
+    <app-even *ngIf="item % 2 === 0" [value]="item"></app-even>
+}

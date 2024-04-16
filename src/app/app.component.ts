@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { EvenComponent } from './even/even.component';
+import { OddComponent } from './odd/odd.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'task';
+  values: number[] = [];
+
+
+  onEventOccurred(value: number) {
+    this.values.push(value);
+  }
 }
